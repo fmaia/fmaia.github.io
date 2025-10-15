@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/fmaia.github.io/'
+  base: '/fmaia.github.io/',
 }));
