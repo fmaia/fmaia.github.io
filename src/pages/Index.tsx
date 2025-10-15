@@ -28,7 +28,7 @@ const Index = () => {
   }, {
     title: "Worldwide Consensus",
     authors: "Maia, F; Matos, M; Pereira, J; Oliveira, R.",
-    venue: "OPODIS 2011",
+    venue: "DAIS 2011",
     doi: "10.1007/978-3-642-21387-8_21",
     award: "Best Paper Award"
   }];
