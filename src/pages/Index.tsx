@@ -111,20 +111,47 @@ const Index = () => {
     institution: "Universidade do Minho"
   }];
   const projects = [{
+    title: "BCD.S+M: Modular Blockchain Data Storage and Management System with AI",
+    period: "2024-Present",
+    role: "Lead",
+    type: "PT2030",
+    website: "https://invisiblelab-dev.github.io/invisible-storage-project-website/",
+    description: "The BCD.S+M project aims to address this gap by exploring new approaches to manage large volumes of data efficiently and securely, adapting dynamically to the data’s own characteristics and requirements. It seeks to rethink data storage management by targeting the core bottlenecks currently limiting system performance and scalability in data-centric applications."
+  },{
     title: "STAYAWAY COVID",
     period: "2020-2021",
     role: "Technical Lead",
-    description: "COVID-19 contact tracing application for Portugal"
+    description: "COVID-19 contact tracing application for Portugal",
+    website: "https://www.sns.gov.pt/apps/stayaway-covid/"
   }, {
     title: "SafeCloud",
     period: "2016-2019",
-    role: "Researcher",
-    description: "H2020 project on secure and resilient cloud architecture"
+    role: "Lead Researcher",
+    type: "H2020",
+    description: "H2020 project on secure and resilient cloud architecture",
+    website: "https://safecloud-project.unine.ch"
   }, {
     title: "CloudDBAppliance",
     period: "2019",
     role: "Researcher",
-    description: "Database appliance for cloud environments"
+    type: "H2020",
+    description: "Database appliance for cloud environments",
+    website: "https://dbr-haslab.github.io/projects/cloudb"
+  }, {
+    title: "Stratus",
+    description: "A Layered Approach to Data Management in the Cloud.",
+    type: "FCT",
+    reference: "FCOMP-01-0124-FEDER-015020",
+    period: "2010-2013",
+    website: "https://stratus.lsd.di.uminho.pt/",
+    role: "Researcher"
+  }, {
+    title: "DC2MS",
+    description: "Dependable Cloud Computing Management System",
+    type: "HP Labs Innovation Research Award",
+    website: "https://gsd.di.uminho.pt/projects/projects/DC2MS/base_view.html",
+    period: "2008-2010",
+    role: "Researcher"
   }];
   const teachingActivities = [{
     name: "Computer Lab",
@@ -323,15 +350,15 @@ const Index = () => {
                 Assistant Professor
               </p>
               <p className="mb-3 text-muted-foreground">
-                Department of Computer Engineering, University of Porto
+                Department of Informatics Engineering, Faculty of Engineering, University of Porto
               </p>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                <Button variant="outline" size="sm" asChild className="gap-1.5">
+                {/*<Button variant="outline" size="sm" asChild className="gap-1.5">
                   <a href="mailto:franciscomaia@fe.up.pt">
                     <Mail className="h-3.5 w-3.5" />
                     Email
                   </a>
-                </Button>
+                </Button>*/}
                 <Button variant="outline" size="sm" asChild className="gap-1.5">
                   <a href="https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=722898" target="_blank" rel="noopener noreferrer">
                     <University className="h-3.5 w-3.5" />
@@ -370,12 +397,17 @@ const Index = () => {
           </CardHeader>
           <CardContent className="prose prose-sm prose-slate max-w-none">
             <p className="text-foreground/80 leading-relaxed text-sm">
-              Francisco Almeida Maia completed his PhD in the MAP-i Doctoral Program in Informatics 
-              in 2015 at Universidade do Minho. He is currently an Assistant Professor at the University of Porto, 
-              Faculty of Engineering. His research focuses on distributed systems, cloud computing, data management, 
-              and system security. He has published more than 20 articles in top-level conferences and has received 
-              multiple awards including Best Paper awards. Francisco has been actively involved in European research 
-              projects such as SafeCloud and has served as Technical Lead for the STAYAWAY COVID project.
+               Francisco Maia is an Assistant Professor at the University of Porto and holds a Ph.D. in Computer Science from 
+               the MAP-i program, a joint doctoral initiative of the Universities of Minho, Aveiro, and Porto. 
+               His research focuses on large-scale data storage and management, including distributed protocols, 
+               fault-tolerant systems, and data security in shared cloud environments. 
+               He is a senior researcher at INESC TEC and is a founder of InvisibleLab, where he has worked on technology transfer 
+               and R&D activities between 2022 and 2024.
+
+                Beyond academia, he has contributed to impactful projects such as the STAYAWAY COVID mobile applications 
+                and has co-authored one of the first computer-implemented invention (software patent) granted to INESC TEC in the United States. 
+                He also dedicates part of his time to social initiatives as vice-president of the board of AMU, an NGO recognized 
+                for its work supporting vulnerable families in Portugal.
             </p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               <Badge variant="secondary" className="text-xs">Distributed Systems</Badge>
@@ -459,7 +491,18 @@ const Index = () => {
                 <p className="mb-2 text-xs text-muted-foreground line-clamp-2">
                   {project.description}
                 </p>
-                <Badge variant="outline" className="text-xs">{project.role}</Badge>
+                <div className="flex items-center justify-between">
+                <div>
+                  <Badge variant="outline" className="text-xs">{project.role}</Badge>
+                  <Badge variant="outline" className="text-xs">{project.type}</Badge>
+                </div>
+                <Button variant="link" size="sm" asChild className="gap-1 h-auto p-0 text-xs">
+                      <a href={project.website} target="_blank" rel="noopener noreferrer">
+                        more
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </Button>
+                </div>
               </CardContent>
             </Card>)}
         </div>
