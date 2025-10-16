@@ -72,7 +72,7 @@ const Index = () => {
     year: "2021",
     thesis: "Implementation of practical and secure methods for storage of cryptographic keys in applications",
     status: "Alumni",
-    cosupervisors: "Ana Alonso",
+    cosupervisors: "Rui Oliveira, Ana Alonso",
     institution: "Universidade do Minho"
   }, {
     name: "Daniel Fernandes",
