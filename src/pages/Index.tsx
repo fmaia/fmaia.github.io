@@ -1,4 +1,4 @@
-import { Mail, ExternalLink, BookOpen, Users, GraduationCap, Award, Linkedin, Building2, University } from "lucide-react";
+import { Mail, ExternalLink, BookOpen, Users, GraduationCap, Award, Linkedin, Building2, University, Coffee } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -424,7 +424,11 @@ const Index = () => {
       <section className="bg-secondary/30 py-12">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <h2 className="mb-2 text-2xl font-bold">Ongoing activities</h2>
+
+            <h2 className="mb-1 text-2xl font-bold flex items-center gap-2">
+              <Coffee className="h-6 w-6 text-primary" /> 
+                Ongoing activities
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               Highlighted initiatives, events, and projects I am working on. 
             </p>
@@ -450,7 +454,7 @@ const Index = () => {
               <p className="text-sm text-foreground/80 mb-3">
                 Always interested in research collaborations, joint projects, and discussing new ideas.
               </p>
-              <Button variant="outline" size="sm" asChild className="gap-1.5">
+              <Button variant="default" size="sm" asChild className="gap-1.5">
                 <a href="mailto:franciscomaia at fe.up.pt">
                   <Mail className="h-3.5 w-3.5" />
                   Get in Touch
