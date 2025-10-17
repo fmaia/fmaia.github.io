@@ -420,6 +420,61 @@ const Index = () => {
         </Card>
       </section>
 
+      {/* Current Activities Section */}
+      <section className="bg-secondary/30 py-12">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="mb-2 text-2xl font-bold">Ongoing activities</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Highlighted initiatives, events, and projects I am working on. 
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="md:row-span-2 bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-shadow">
+              <BookOpen className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-xl font-bold mb-3">Reading Group</h3>
+              <p className="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Join our ongoing informal readings group where we discuss latest research papers and trends in distributed systems and related areas. We meet regularly to explore cutting-edge research and share insights.
+              </p>
+              <Button variant="default" asChild className="gap-1.5">
+                <a href="https://cbaquero.github.io/web/InformalReadings" target="_blank" rel="noopener noreferrer">
+                  Learn More
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Users className="h-8 w-8 text-primary mb-3" />
+              <h3 className="text-base font-semibold mb-2">Open to Collaborations</h3>
+              <p className="text-sm text-foreground/80 mb-3">
+                Always interested in research collaborations, joint projects, and discussing new ideas.
+              </p>
+              <Button variant="outline" size="sm" asChild className="gap-1.5">
+                <a href="mailto:franciscomaia at fe.up.pt">
+                  <Mail className="h-3.5 w-3.5" />
+                  Get in Touch
+                </a>
+              </Button>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Award className="h-8 w-8 text-primary mb-3" />
+              <h3 className="text-base font-semibold mb-2">Challenges I'm working on</h3>
+              <p className="text-sm text-foreground/80 mb-3">
+                I am interested in how data management systems will tackle the challenges of large-scale storage and management of data, as well as how to ensure privacy in increasingly shared environments.
+              </p>
+              <Button variant="outline" size="sm" asChild className="gap-1.5">
+                <a href="https://invisiblelab-dev.github.io/invisible-storage-project-website/" target="_blank" rel="noopener noreferrer">
+                  BCDS+M Project
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Research & Publications */}
       <section className="bg-secondary/30 py-12">
         <div className="container mx-auto px-4">
@@ -508,37 +563,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Teaching */}
-      <section className="bg-secondary/30 py-12">
-        <div className="container mx-auto px-4">
-          <div className="mb-6">
-            <h2 className="mb-1 text-2xl font-bold flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-primary" />
-              Teaching Activities
-            </h2>
-            <p className="text-sm text-muted-foreground">Courses taught and coordinated in different Universities</p>
-          </div>
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {teachingActivities.map((course, courseIndex) => <Card key={courseIndex} className="shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="pt-4 pb-3 px-4">
-                  <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-2">{course.name}</h4>
-                  <p className="text-xs text-muted-foreground mb-2">{course.level}</p>
-                  <div className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
-                    <span className="font-medium text-primary">
-                      ({course.instances.map(i => i.year.split('/').map(y => y.slice(-2)).join('/')).join(', ')})
-                    </span>
-                    <span>•</span>
-                    <span>{course.instances[0].institution}</span>
-                    {course.ects > 0 && <><span>•</span><span>{course.ects} ECTS</span></>}
-                    <span>•</span>
-                    <Badge variant="outline" className="text-xs h-auto py-0 px-1.5">{course.instances[0].role}</Badge>
-                  </div>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
       {/* Supervised Students */}
       <section className="container mx-auto px-4 py-12">
         <div className="mb-6">
@@ -573,10 +597,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Teaching */}
+      <section className="bg-secondary/30 py-12">
+        <div className="container mx-auto px-4">
+          <div className="mb-6">
+            <h2 className="mb-1 text-2xl font-bold flex items-center gap-2">
+              <GraduationCap className="h-6 w-6 text-primary" />
+              Teaching Activities
+            </h2>
+            <p className="text-sm text-muted-foreground">Courses taught and coordinated in different Universities</p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {teachingActivities.map((course, courseIndex) => <Card key={courseIndex} className="shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="pt-4 pb-3 px-4">
+                  <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-2">{course.name}</h4>
+                  <p className="text-xs text-muted-foreground mb-2">{course.level}</p>
+                  <div className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+                    <span className="font-medium text-primary">
+                      ({course.instances.map(i => i.year.split('/').map(y => y.slice(-2)).join('/')).join(', ')})
+                    </span>
+                    <span>•</span>
+                    <span>{course.instances[0].institution}</span>
+                    {course.ects > 0 && <><span>•</span><span>{course.ects} ECTS</span></>}
+                    <span>•</span>
+                    <Badge variant="outline" className="text-xs h-auto py-0 px-1.5">{course.instances[0].role}</Badge>
+                  </div>
+                </CardContent>
+              </Card>)}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-card py-6">
         <div className="container mx-auto px-4 text-center text-xs text-muted-foreground">
-          <p>© 2025 Francisco Almeida Maia. University of Porto, Faculty of Engineering.</p>
+          <p>© 2025 Francisco Almeida Maia.</p>
         </div>
       </footer>
     </div>;
