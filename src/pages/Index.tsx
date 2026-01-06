@@ -33,6 +33,13 @@ const Index = () => {
     award: "Best Paper Award"
   }];
   const students = [{
+    name: "Tiago da Silva Azevedo",
+    year: "Ongoing",
+    thesis: "Design and Implementation of a Real-Time Digital Twin Platform for Monitoring and Managing EV Charging Infrastructure",
+    status: "Ongoing",
+    cosupervisors: "",
+    institution: "Universidade do Porto"
+  }, {
     name: "Tomás Figueiredo Marques Palma",
     year: "Ongoing",
     thesis: "Efficient data replication for large-scale systems",
