@@ -118,9 +118,16 @@ const Index = () => {
     institution: "Universidade do Minho"
   }];
   const projects = [{
+    title: "RESCUEWARE: Cibersegurança e Recuperação de Dados Inteligente e Auto-Configurável para a Resiliência contra Ransomware",
+    period: "2026-Present",
+    role: "Researcher",
+    type: "PT2030",
+    website: "https://www.inesctec.pt/pt/projetos/rescueware",
+    description: "TBD"
+  },{
     title: "BCD.S+M: Modular Blockchain Data Storage and Management System with AI",
     period: "2024-Present",
-    role: "Lead",
+    role: "Researcher",
     type: "PT2030",
     website: "https://invisiblelab-dev.github.io/invisible-storage-project-website/",
     description: "The BCD.S+M project aims to address this gap by exploring new approaches to manage large volumes of data efficiently and securely, adapting dynamically to the data’s own characteristics and requirements. It seeks to rethink data storage management by targeting the core bottlenecks currently limiting system performance and scalability in data-centric applications."
