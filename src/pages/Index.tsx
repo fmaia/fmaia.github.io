@@ -33,8 +33,17 @@ const Index = () => {
     award: "Best Paper Award"
   }];
   const students = [{
+    name: "Tiago Ribeiro de Sá Cruz",
+    year: "Ongoing",
+    level: "PhD",
+    thesis: "Towards Unlocking Legacy Data: Inferring Structure and Meaning from Heterogeneous Data for AI Workflows",
+    status: "Ongoing",
+    cosupervisors: "Mariana Malta",
+    institution: "Universidade do Porto"
+  },{
     name: "Guilherme Duarte Silva Matos",
     year: "Ongoing",
+    level: "MSc",
     thesis: "NeaHermaia — The Spirit of Internet 1.0 for the 21st Century and Beyond",
     status: "Ongoing",
     cosupervisors: "",
@@ -42,6 +51,7 @@ const Index = () => {
   },{
     name: "Luís Miguel Lima Tavares",
     year: "Ongoing",
+    level: "MSc",
     thesis: "Hardware-in-the-Loop Toolchain for Low-Level Programming and Operating Systems Education using ESP32",
     status: "Ongoing",
     cosupervisors: "Bruno Lima",
@@ -51,6 +61,7 @@ const Index = () => {
     year: "Ongoing",
     thesis: "Byzantine-Resilient Epidemic Data Management for Blockchain Systems",
     status: "Ongoing",
+      level: "MSc",
     cosupervisors: "",
     institution: "Universidade do Porto"
   },{
@@ -58,6 +69,7 @@ const Index = () => {
     year: "Ongoing",
     thesis: "Proactive Autonomic Management for Epidemic Data Stores and Its Implications for AI Production Storage Systems",
     status: "Ongoing",
+    level: "MSc",
     cosupervisors: "",
     institution: "Universidade do Porto"
   },{
@@ -65,6 +77,7 @@ const Index = () => {
     year: "Ongoing",
     thesis: "Human-Centred Cybersecurity: Understanding User Vulnerability to Ransomware Attacks",
     status: "Ongoing",
+    level: "MSc",
     cosupervisors: "Jorge Melegati",
     institution: "Universidade do Porto"
   },{
@@ -72,11 +85,13 @@ const Index = () => {
     year: "Ongoing",
     thesis: "A Language Runtime Inside Programmable Memory",
     status: "Ongoing",
+    level: "MSc",
     cosupervisors: "Valerio Schiavoni",
     institution: "Universidade do Porto"
   },{
     name: "Tiago da Silva Azevedo",
     year: "2026",
+    level: "MSc",
     thesis: "Design and Implementation of a Real-Time Digital Twin Platform for Monitoring and Managing EV Charging Infrastructure",
     status: "Alumni",
     cosupervisors: "",
@@ -86,6 +101,7 @@ const Index = () => {
     year: "2026",
     thesis: "Efficient data replication for large-scale systems",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "",
     institution: "Universidade do Porto"
   }, {
@@ -93,6 +109,7 @@ const Index = () => {
     year: "2026",
     thesis: "PADME: Probabilistic Data Management for Efficient ML/AI",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "Carlos Baquero",
     institution: "Universidade do Porto"
   }, {
@@ -101,12 +118,14 @@ const Index = () => {
     thesis: "Modular Blockchain Data Storage and Management System",
     status: "Alumni",
     cosupervisors: "",
+    level: "MSc",
     institution: "Universidade do Porto"
   }, {
     name: "Alexandre Ferreira",
     year: "2023",
     thesis: "Fault-tolerant and Large-scale Storage for POSIX-compliant Applications",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "João Paulo",
     institution: "Universidade do Minho"
   }, {
@@ -114,6 +133,7 @@ const Index = () => {
     year: "2021",
     thesis: "Implementation of practical and secure methods for storage of cryptographic keys in applications",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "Rui Oliveira, Ana Alonso",
     institution: "Universidade do Minho"
   }, {
@@ -121,6 +141,7 @@ const Index = () => {
     year: "2021",
     thesis: "LSFS: Sistema de ficheiros tolerante a faltas para armazenamento em larga escala",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "Rui Oliveira, João Paulo",
     institution: "Universidade do Minho"
   }, {
@@ -128,6 +149,7 @@ const Index = () => {
     year: "2018",
     thesis: "Aplicacações Web com requisitos de armazenamento e processamento privados",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "José Pereira",
     institution: "Universidade do Minho"
   }, {
@@ -135,6 +157,7 @@ const Index = () => {
     year: "2018",
     thesis: "SafePolyglot: Sistema Poliglota de Gestão Privada de Dados",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "José Pereira",
     institution: "Universidade do Minho"
   }, {
@@ -142,6 +165,7 @@ const Index = () => {
     year: "2017",
     thesis: "Coerência probabilística em sistemas chave-valor escaláveis",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "Miguel Matos, Rui Oliveira",
     institution: "Universidade do Minho"
   }, {
@@ -149,6 +173,7 @@ const Index = () => {
     year: "2017",
     thesis: "Automatic Adaptation to Heterogeneity in Large Scale Distributed Storage Systems",
     status: "Alumni",
+    level: "MSc",
     cosupervisors: "José Pereira",
     institution: "Universidade do Minho"
   }];
@@ -631,7 +656,9 @@ const Index = () => {
                 <div className="flex items-start justify-between gap-2 mb-1">
                   <h3 className="text-sm font-semibold">{student.name}</h3>
                   <div className="flex gap-1 shrink-0">
-                    <Badge variant="outline" className="text-xs">MsC</Badge>
+                    <Badge variant="outline" className="text-xs">
+                      {student.level}
+                    </Badge>
                     <Badge variant={student.status === "Ongoing" ? "default" : "secondary"} className="text-xs">
                       {student.status}
                     </Badge>
