@@ -278,7 +278,7 @@ const Index = () => {
       institution: "U. Minho",
       role: "Lab Classes"
     }]
-  }, {
+  },{
     name: "Large-Scale Distributed Systems",
     ects: 6,
     level: "1st year, MSc in Computer Science",
@@ -286,7 +286,12 @@ const Index = () => {
       year: "2026/2027",
       institution: "FEUP",
       role: "Course Coordinator"
-    }, {
+    }]
+  }, {
+    name: "Large-Scale Distributed Systems",
+    ects: 6,
+    level: "1st year, MSc in Computer Science",
+    instances: [{
       year: "2025/2026",
       institution: "FEUP",
       role: "Teaching"
