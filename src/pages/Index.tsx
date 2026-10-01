@@ -232,6 +232,10 @@ const Index = () => {
     ects: 6,
     level: "2nd year, BSc in Computer Science",
     instances: [{
+      year: "2026/2027",
+      institution: "FEUP",
+      role: "Course Coordinator"
+    },{
       year: "2025/2026",
       institution: "FEUP",
       role: "Course Coordinator"
@@ -245,6 +249,10 @@ const Index = () => {
     ects: 6,
     level: "2nd year, BSc in Computer Science",
     instances: [{
+      year: "2026/2027",
+      institution: "FEUP",
+      role: "Course Coordinator"
+    }, {
       year: "2025/2026",
       institution: "FEUP",
       role: "Course Coordinator"
@@ -275,6 +283,10 @@ const Index = () => {
     ects: 6,
     level: "1st year, MSc in Computer Science",
     instances: [{
+      year: "2026/2027",
+      institution: "FEUP",
+      role: "Course Coordinator"
+    }, {
       year: "2025/2026",
       institution: "FEUP",
       role: "Teaching"
