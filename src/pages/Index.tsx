@@ -33,39 +33,74 @@ const Index = () => {
     award: "Best Paper Award"
   }];
   const students = [{
+    name: "Guilherme Duarte Silva Matos",
+    year: "Ongoing",
+    thesis: "NeaHermaia — The Spirit of Internet 1.0 for the 21st Century and Beyond",
+    status: "Ongoing",
+    cosupervisors: "",
+    institution: "Universidade do Porto"
+  },{
+    name: "Luís Miguel Lima Tavares",
+    year: "Ongoing",
+    thesis: "Hardware-in-the-Loop Toolchain for Low-Level Programming and Operating Systems Education using ESP32",
+    status: "Ongoing",
+    cosupervisors: "Bruno Lima",
+    institution: "Universidade do Porto"
+  },{
+    name: "Pedro Gonçalo Mendes Alves de Oliveira",
+    year: "Ongoing",
+    thesis: "Byzantine-Resilient Epidemic Data Management for Blockchain Systems",
+    status: "Ongoing",
+    cosupervisors: "",
+    institution: "Universidade do Porto"
+  },{
+    name: "Guilherme Roque Ferreira Leite Caetano Martins",
+    year: "Ongoing",
+    thesis: "Proactive Autonomic Management for Epidemic Data Stores and Its Implications for AI Production Storage Systems",
+    status: "Ongoing",
+    cosupervisors: "",
+    institution: "Universidade do Porto"
+  },{
+    name: "Diogo Costa Pinto",
+    year: "Ongoing",
+    thesis: "Human-Centred Cybersecurity: Understanding User Vulnerability to Ransomware Attacks",
+    status: "Ongoing",
+    cosupervisors: "Jorge Melegati",
+    institution: "Universidade do Porto"
+  },{
     name: "Tiago da Silva Azevedo",
     year: "Ongoing",
-    thesis: "Design and Implementation of a Real-Time Digital Twin Platform for Monitoring and Managing EV Charging Infrastructure",
+    thesis: "A Language Runtime Inside Programmable Memory",
     status: "Ongoing",
+    cosupervisors: "Valerio Schiavoni",
+    institution: "Universidade do Porto"
+  },{
+    name: "Tiago da Silva Azevedo",
+    year: "2026",
+    thesis: "Design and Implementation of a Real-Time Digital Twin Platform for Monitoring and Managing EV Charging Infrastructure",
+    status: "Alumni",
     cosupervisors: "",
     institution: "Universidade do Porto"
   }, {
     name: "Tomás Figueiredo Marques Palma",
-    year: "Ongoing",
+    year: "2026",
     thesis: "Efficient data replication for large-scale systems",
-    status: "Ongoing",
+    status: "Alumni",
     cosupervisors: "",
     institution: "Universidade do Porto"
   }, {
     name: "Diogo Filipe Pereira Santos",
-    year: "Ongoing",
+    year: "2026",
     thesis: "PADME: Probabilistic Data Management for Efficient ML/AI",
-    status: "Ongoing",
+    status: "Alumni",
     cosupervisors: "Carlos Baquero",
     institution: "Universidade do Porto"
   }, {
     name: "Alexandre Henrique Silva dos Santos",
-    year: "Ongoing",
+    year: "2026",
     thesis: "Modular Blockchain Data Storage and Management System",
-    status: "Ongoing",
+    status: "Alumni",
     cosupervisors: "",
-    institution: "Universidade do Porto"
-  }, {
-    name: "Tomás Paiva Ramos",
-    year: "Ongoing",
-    thesis: "Security and Privacy Assurance for Model‑Context‑Protocol Servers and Agentic AI Workloads",
-    status: "Ongoing",
-    cosupervisors: "Rolando Martins",
     institution: "Universidade do Porto"
   }, {
     name: "Alexandre Ferreira",
